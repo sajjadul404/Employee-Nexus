@@ -104,6 +104,8 @@ class employee:
         self.table.column("gen", width=100)
         self.table.column("addr", width=100)
 
+        self.table.pack(fill=tk.BOTH, expand=1)
+
         self.table.pack()
 
 root = tk.Tk()
