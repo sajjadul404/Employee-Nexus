@@ -65,10 +65,10 @@ class employee:
 
         
         #......Fram2......
-        self.Fram2 = tk.Frame(self.root, bd=5, relief="groove",bg="#7FBDF0")
+        self.Fram2 = tk.Frame(self.root, bd=5, relief="groove",bg="lightblue")
         self.Fram2.place(x=400, y=80, width=870, height=550)
 
-        self.searchLable = tk.Label(self.Fram2, padx=5, text="Search By:",fg="Black",bg="white", font=("Arial", 14, "bold"),pady=10)
+        self.searchLable = tk.Label(self.Fram2, padx=5, text="Search By:",fg="Black",bg="lightblue", font=("Arial", 14, "bold"),pady=10)
         self.searchLable.grid(row=0, column=0)
         self.searchType = ttk.Combobox(self.Fram2, font=("Arial", 14), width=13, state="readonly")
         self.searchType['values'] = ("ID", "Name")
