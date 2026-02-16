@@ -88,6 +88,10 @@ class employee:
         self.tabFrame = tk.Frame(self.Fram2, bd=5, relief="groove")
         self.tabFrame.place(x=10, y=80, width=840, height=450)
 
+        self.table = ttk.Treeview(self.tabFrame,columns=("id","name","desig","sal","gen","addr"), show="headings")
+
+        
+        self.table.pack()
 
 root = tk.Tk()
 obj = employee(root)
