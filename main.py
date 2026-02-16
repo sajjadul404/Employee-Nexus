@@ -65,7 +65,7 @@ class employee:
 
         
         #......Fram2......
-        self.Fram2 = tk.Frame(self.root, bd=5, relief="groove")
+        self.Fram2 = tk.Frame(self.root, bd=5, relief="groove",bg="#7FBDF0")
         self.Fram2.place(x=400, y=80, width=870, height=550)
 
         self.searchLable = tk.Label(self.Fram2, padx=5, text="Search By:",fg="Black",bg="white", font=("Arial", 14, "bold"),pady=10)
@@ -82,6 +82,11 @@ class employee:
 
         self.showbtn = tk.Button(self.Fram2,text="Show All",width=10, font=("Arial", 14, "bold"))
         self.showbtn.grid(row=0,column=4,padx=10,pady=10)
+
+
+        #.....Table Frame......
+        self.tabFrame = tk.Frame(self.Fram2, bd=5, relief="groove")
+        self.tabFrame.place(x=10, y=80, width=840, height=450)
 
 
 root = tk.Tk()
