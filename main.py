@@ -88,6 +88,9 @@ class employee:
         self.tabFrame = tk.Frame(self.Fram2, bd=5, relief="groove")
         self.tabFrame.place(x=10, y=80, width=840, height=450)
 
+        self.scroll_x = tk.Scrollbar(self.tabFrame, orient="horizontal")
+        self.scroll_x.pack(side=tk.BOTTOM)
+
         self.table = ttk.Treeview(self.tabFrame,columns=("id","name","desig","sal","gen","addr"), show="headings")
         self.table.heading("id", text="Employee ID")
         self.table.heading("name", text="Employee Name")
