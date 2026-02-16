@@ -89,8 +89,13 @@ class employee:
         self.tabFrame.place(x=10, y=80, width=840, height=450)
 
         self.table = ttk.Treeview(self.tabFrame,columns=("id","name","desig","sal","gen","addr"), show="headings")
+        self.table.heading("id", text="Employee ID")
+        self.table.heading("name", text="Employee Name")
+        self.table.heading("desig", text="Designation")
+        self.table.heading("sal", text="Salary")
+        self.table.heading("gen", text="Gender")
+        self.table.heading("addr", text="Address")
 
-        
         self.table.pack()
 
 root = tk.Tk()
