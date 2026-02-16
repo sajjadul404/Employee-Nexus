@@ -95,6 +95,14 @@ class employee:
         self.table.heading("sal", text="Salary")
         self.table.heading("gen", text="Gender")
         self.table.heading("addr", text="Address")
+        self.table['show'] = 'headings'
+        
+        self.table.column("id", width=100)
+        self.table.column("name", width=150)
+        self.table.column("desig", width=150)
+        self.table.column("sal", width=100)
+        self.table.column("gen", width=100)
+        self.table.column("addr", width=200)
 
         self.table.pack()
 
