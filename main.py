@@ -89,7 +89,7 @@ class employee:
         self.tabFrame.place(x=10, y=80, width=840, height=450)
 
         self.scroll_x = tk.Scrollbar(self.tabFrame, orient="horizontal")
-        self.scroll_x.pack(side=tk.BOTTOM)
+        self.scroll_x.pack(side=tk.BOTTOM, fill=tk.X)
 
         self.scroll_y = tk.Scrollbar(self.tabFrame, orient="vertical")
         self.scroll_y.pack(side=tk.RIGHT)
