@@ -96,6 +96,7 @@ class employee:
 
         self.table = ttk.Treeview(self.tabFrame,columns=("id","name","desig","sal","gen","addr"), show="headings", xscrollcommand=self.scroll_x.set, yscrollcommand=self.scroll_y.set)
         self.scroll_x.config(command=self.table.xview)
+        self.scroll_y.config(command=self.table.yview)
 
         self.table.heading("id", text="Employee ID")
         self.table.heading("name", text="Employee Name")
