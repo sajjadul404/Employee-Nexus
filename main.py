@@ -92,7 +92,7 @@ class employee:
         self.scroll_x.pack(side=tk.BOTTOM, fill=tk.X)
 
         self.scroll_y = tk.Scrollbar(self.tabFrame, orient="vertical")
-        self.scroll_y.pack(side=tk.RIGHT)
+        self.scroll_y.pack(side=tk.RIGHT, fill=tk.Y)
 
         self.table = ttk.Treeview(self.tabFrame,columns=("id","name","desig","sal","gen","addr"), show="headings", xscrollcommand=self.scroll_x.set, yscrollcommand=self.scroll_y.set)
         self.scroll_x.config(command=self.table.xview)
