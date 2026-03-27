@@ -32,7 +32,7 @@ def add_employee():
     if name.get()=="" or email.get()=="":
         messagebox.showerror("Error", "Name and Email Required")
         return
-
+    
     con = connect_db()
     cur = con.cursor()
     cur.execute(
@@ -45,93 +45,6 @@ def add_employee():
     clear_fields()
     messagebox.showinfo("Success", "Employee Added Successfully")
 
-def fetch_data():
-    con = connect_db()
-    cur = con.cursor()
-    cur.execute("SELECT * FROM employees")
-    rows = cur.fetchall()
-
-    employee_table.delete(*employee_table.get_children())
-    for row in rows:
-        employee_table.insert("", tk.END, values=row)
-    con.close()
-
-def search_employee():   # 🔍 NEW
-    con = connect_db()
-    cur = con.cursor()
-
-    query = "SELECT * FROM employees WHERE name LIKE %s OR email LIKE %s"
-    value = "%" + search_var.get() + "%"
-
-    cur.execute(query, (value, value))
-    rows = cur.fetchall()
-
-    employee_table.delete(*employee_table.get_children())
-    for row in rows:
-        employee_table.insert("", tk.END, values=row)
-
-    con.close()
-
-def reset_search():   # 🔄 NEW
-    search_var.set("")
-    fetch_data()
-
-def get_cursor(event):
-    row = employee_table.focus()
-    data = employee_table.item(row)["values"]
-
-    if data:
-        emp_id.set(data[0])
-        name.set(data[1])
-        email.set(data[2])
-        phone.set(data[3])
-        department.set(data[4])
-        salary.set(data[5])
-
-def update_employee():
-    if emp_id.get()=="":
-        messagebox.showerror("Error", "Select Employee First")
-        return
-
-    con = connect_db()
-    cur = con.cursor()
-    cur.execute("""
-        UPDATE employees SET
-        name=%s,
-        email=%s,
-        phone=%s,
-        department=%s,
-        salary=%s
-        WHERE id=%s
-    """, (name.get(), email.get(), phone.get(), department.get(), salary.get(), emp_id.get()))
-
-    con.commit()
-    con.close()
-    fetch_data()
-    clear_fields()
-    messagebox.showinfo("Success", "Employee Updated Successfully")
-
-def delete_employee():
-    if emp_id.get()=="":
-        messagebox.showerror("Error", "Select Employee First")
-        return
-
-    con = connect_db()
-    cur = con.cursor()
-    cur.execute("DELETE FROM employees WHERE id=%s", (emp_id.get(),))
-    con.commit()
-    con.close()
-    fetch_data()
-    clear_fields()
-    messagebox.showinfo("Success", "Employee Deleted Successfully")
-
-def clear_fields():
-    emp_id.set("")
-    name.set("")
-    email.set("")
-    phone.set("")
-    department.set("")
-    salary.set("")
 
 # ---------------- FORM FRAME ----------------
 form_frame = tk.Frame(root, bg="#f2a7c2", bd=5, relief=tk.RIDGE)
