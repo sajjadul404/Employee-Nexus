@@ -57,6 +57,10 @@ bg_frame.place(relwidth=1, relheight=1)
 login_frame = tk.Frame(login_window, bg="white", bd=0)
 login_frame.place(relx=0.5, rely=0.5, anchor="center", width=400, height=350)
 
+# -------- VARIABLES --------
+username = tk.StringVar()
+password = tk.StringVar()
+
 
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
