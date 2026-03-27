@@ -1,6 +1,9 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import mysql.connector
+from colorama import Fore, init
+
+init(autoreset=True)
 
 # ---------------- DATABASE CONNECTION ----------------
 def connect_db():
@@ -10,6 +13,17 @@ def connect_db():
         password="",
         database="companydb"
     )
+
+# ---------------- LOG FUNCTION ----------------
+def log(msg, t="info"):
+    if t == "success":
+        print(Fore.GREEN + "[SUCCESS] " + msg)
+    elif t == "error":
+        print(Fore.RED + "[ERROR] " + msg)
+    else:
+        print(Fore.CYAN + "[INFO] " + msg)
+
+
 
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
