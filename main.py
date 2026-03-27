@@ -23,6 +23,16 @@ def log(msg, t="info"):
     else:
         print(Fore.CYAN + "[INFO] " + msg)
 
+# ================= LOGIN SYSTEM =================
+def login():
+    if username.get() == "admin" and password.get() == "1234":
+        messagebox.showinfo("Login", "Login Successful")
+        log("User logged in", "success")
+        login_window.destroy()
+        open_main_window()
+    else:
+        messagebox.showerror("Error", "Invalid Username or Password")
+        log("Login failed", "error")
 
 
 # ---------------- MAIN WINDOW ----------------
