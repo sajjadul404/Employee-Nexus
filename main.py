@@ -1,5 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
+import mysql.connector
+
+# Database connection
+db = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="employee_db"
+)
 
 class employee:
     def __init__(self, root):
