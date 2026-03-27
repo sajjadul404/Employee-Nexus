@@ -49,6 +49,10 @@ login_window.title("Login System")
 login_window.geometry("900x500")   # 🔥 BIG SIZE
 login_window.resizable(False, False)
 
+# -------- BACKGROUND --------
+bg_frame = tk.Frame(login_window, bg="#ffb6c1")
+bg_frame.place(relwidth=1, relheight=1)
+
 
 
 # ---------------- MAIN WINDOW ----------------
