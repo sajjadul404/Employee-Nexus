@@ -3,11 +3,12 @@ from tkinter import ttk
 import mysql.connector
 
 # Database connection
-db = mysql.connector.connect(
+def connect_db():
+    return mysql.connector.connect(
     host="localhost",
-    user="your_username",
-    password="your_password",
-    database="employee_db"
+    user="root",
+    password="",
+    database="companybd"
 )
 
 class employee:
