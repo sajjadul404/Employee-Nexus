@@ -53,6 +53,9 @@ login_window.resizable(False, False)
 bg_frame = tk.Frame(login_window, bg="#ffb6c1")
 bg_frame.place(relwidth=1, relheight=1)
 
+# -------- CENTER LOGIN CARD --------
+login_frame = tk.Frame(login_window, bg="white", bd=0)
+login_frame.place(relx=0.5, rely=0.5, anchor="center", width=400, height=350)
 
 
 # ---------------- MAIN WINDOW ----------------
