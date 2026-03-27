@@ -35,6 +35,22 @@ def login():
         log("Login failed", "error")
 
 
+# ================= MODERN LOGIN WINDOW =================
+def login():
+    if username.get() == "admin" and password.get() == "1234":
+        messagebox.showinfo("Login", "Login Successful")
+        login_window.destroy()
+        open_main_window()
+    else:
+        messagebox.showerror("Error", "Invalid Username or Password")
+
+login_window = tk.Tk()
+login_window.title("Login System")
+login_window.geometry("900x500")   # 🔥 BIG SIZE
+login_window.resizable(False, False)
+
+
+
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
 root.title("Employee Management System")
