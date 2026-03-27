@@ -27,6 +27,7 @@ salary = tk.StringVar()
 search_var = tk.StringVar()   # 🔍 NEW
 
 # ---------------- FUNCTIONS ----------------
+
 def add_employee():
     if name.get()=="" or email.get()=="":
         messagebox.showerror("Error", "Name and Email Required")
@@ -132,7 +133,7 @@ def clear_fields():
     department.set("")
     salary.set("")
 
-    # ---------------- TITLE ----------------
+# ---------------- TITLE ----------------
 title = tk.Label(
     root,
     text="EMPLOYEE MANAGEMENT SYSTEM",
@@ -141,6 +142,20 @@ title = tk.Label(
     fg="black"
 )
 title.pack(pady=10)
+
+# ---------------- SEARCH BAR ----------------
+search_frame = tk.Frame(root, bg="#f8c8dc")
+search_frame.place(x=430, y=40, width=490, height=40)
+
+tk.Label(search_frame, text="Search", bg="#f8c8dc", font=("Arial", 12, "bold")).pack(side=tk.LEFT, padx=5)
+
+tk.Entry(search_frame, textvariable=search_var, font=("Arial", 12), width=25).pack(side=tk.LEFT, padx=5)
+
+tk.Button(search_frame, text="SEARCH", font=("Arial", 10, "bold"),
+          bg="#ff69b4", command=search_employee).pack(side=tk.LEFT, padx=5)
+
+tk.Button(search_frame, text="RESET", font=("Arial", 10, "bold"),
+          bg="#ff69b4", command=reset_search).pack(side=tk.LEFT, padx=5)
 
 # ---------------- FORM FRAME ----------------
 form_frame = tk.Frame(root, bg="#f2a7c2", bd=5, relief=tk.RIDGE)
