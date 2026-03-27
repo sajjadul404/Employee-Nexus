@@ -11,6 +11,12 @@ def connect_db():
         database="companydb"
     )
 
+# ---------------- MAIN WINDOW ----------------
+root = tk.Tk()
+root.title("Employee Management System")
+root.geometry("950x550")
+root.config(bg="#f8c8dc")
+
 # ---------------- LOAD DATA ----------------
 fetch_data()
 
