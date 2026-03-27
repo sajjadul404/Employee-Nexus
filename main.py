@@ -132,6 +132,16 @@ def clear_fields():
     department.set("")
     salary.set("")
 
+    # ---------------- TITLE ----------------
+title = tk.Label(
+    root,
+    text="EMPLOYEE MANAGEMENT SYSTEM",
+    font=("Arial", 22, "bold"),
+    bg="#f8c8dc",
+    fg="black"
+)
+title.pack(pady=10)
+
 # ---------------- FORM FRAME ----------------
 form_frame = tk.Frame(root, bg="#f2a7c2", bd=5, relief=tk.RIDGE)
 form_frame.place(x=30, y=70, width=390, height=450)
