@@ -85,6 +85,16 @@ tk.Entry(login_frame,
          bd=2,
          relief="groove").pack(pady=8, padx=40, fill="x")
 
+# -------- LOGIN BUTTON --------
+tk.Button(login_frame,
+          text="LOGIN",
+          font=("Arial", 12, "bold"),
+          bg="#ff69b4",
+          fg="white",
+          activebackground="#ff1493",
+          cursor="hand2",
+          command=login).pack(pady=25, ipadx=10, ipady=5)
+
 
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
