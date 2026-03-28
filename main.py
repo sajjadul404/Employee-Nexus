@@ -61,6 +61,14 @@ login_frame.place(relx=0.5, rely=0.5, anchor="center", width=400, height=350)
 username = tk.StringVar()
 password = tk.StringVar()
 
+# -------- TITLE --------
+tk.Label(login_frame,
+         text="Welcome Back",
+         font=("Arial", 20, "bold"),
+         bg="white",
+         fg="#ff69b4").pack(pady=20)
+
+
 
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
