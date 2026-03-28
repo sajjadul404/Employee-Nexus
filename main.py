@@ -76,6 +76,14 @@ tk.Entry(login_frame,
          bd=2,
          relief="groove").pack(pady=8, padx=40, fill="x")
 
+# -------- PASSWORD --------
+tk.Label(login_frame, text="Password", bg="white", font=("Arial", 11)).pack(anchor="w", padx=40)
+tk.Entry(login_frame,
+         textvariable=password,
+         show="*",
+         font=("Arial", 12),
+         bd=2,
+         relief="groove").pack(pady=8, padx=40, fill="x")
 
 
 # ---------------- MAIN WINDOW ----------------
