@@ -95,11 +95,6 @@ tk.Button(login_frame,
           cursor="hand2",
           command=login).pack(pady=25, ipadx=10, ipady=5)
 
-# -------- FOOTER --------
-tk.Label(login_frame,
-         text="Employee Management System",
-         bg="white",
-         fg="gray").pack(side="bottom", pady=10)
 
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
