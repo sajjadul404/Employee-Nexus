@@ -109,7 +109,7 @@ email = tk.StringVar()
 phone = tk.StringVar()
 department = tk.StringVar()
 salary = tk.StringVar()
-search_var = tk.StringVar()   # 🔍 NEW
+search_var = tk.StringVar()
 
 # ---------------- FUNCTIONS ----------------
 
