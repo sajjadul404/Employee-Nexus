@@ -95,7 +95,6 @@ tk.Button(login_frame,
           cursor="hand2",
           command=login).pack(pady=25, ipadx=10, ipady=5)
 
-
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
 root.title("Employee Management System")
