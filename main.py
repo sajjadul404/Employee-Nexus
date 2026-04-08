@@ -140,7 +140,7 @@ def fetch_data():
         employee_table.insert("", tk.END, values=row)
     con.close()
 
-def search_employee():   # 🔍 NEW
+def search_employee():   #  NEW
     con = connect_db()
     cur = con.cursor()
 
