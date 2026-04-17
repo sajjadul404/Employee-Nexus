@@ -317,5 +317,6 @@ employee_table.pack(fill=tk.BOTH, expand=1)
 employee_table.bind("<ButtonRelease-1>", get_cursor)
 
 # ---------------- LOAD DATA ----------------
+
 fetch_data()
 root.mainloop()
