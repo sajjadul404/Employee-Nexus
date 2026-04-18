@@ -279,6 +279,7 @@ tk.Button(form_frame, text="CLEAR", width=14, font=btn_font, bg="#ff69b4", comma
     .grid(row=6, column=1)
 
 # ---------------- TABLE FRAME ----------------
+
 table_frame = tk.Frame(root, bd=4, relief=tk.RIDGE)
 table_frame.place(x=430, y=80, width=490, height=440)
 
