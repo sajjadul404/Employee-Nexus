@@ -153,7 +153,6 @@ def search_employee():
     employee_table.delete(*employee_table.get_children())
     for row in rows:
         employee_table.insert("", tk.END, values=row)
-
     con.close()
 
 def reset_search():
