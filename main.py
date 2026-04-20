@@ -241,6 +241,7 @@ tk.Button(search_frame, text="RESET", font=("Arial", 10, "bold"),
           bg="#ff69b4", command=reset_search).pack(side=tk.LEFT, padx=5)
 
 # ---------------- FORM FRAME ----------------
+
 form_frame = tk.Frame(root, bg="#f2a7c2", bd=5, relief=tk.RIDGE)
 form_frame.place(x=30, y=70, width=390, height=450)
 
