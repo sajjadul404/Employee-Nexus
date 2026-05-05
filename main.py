@@ -38,7 +38,9 @@ def login():
 # ================= MODERN LOGIN WINDOW =================
 
 
-login_window = tk.Tk()
+root = tk.Tk()
+root.withdraw()  # Hide main window until login is successful
+login_window = tk.Toplevel(root)
 login_window.title("Login System")
 login_window.geometry("900x500")   # 🔥 BIG SIZE
 login_window.resizable(False, False)
