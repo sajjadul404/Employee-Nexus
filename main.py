@@ -29,7 +29,7 @@ def login():
         messagebox.showinfo("Login", "Login Successful")
         log("User logged in", "success")
         login_window.destroy()
-        open_main_window()
+        root.deiconify()  # Show main window
     else:
         messagebox.showerror("Error", "Invalid Username or Password")
         log("Login failed", "error")
@@ -97,6 +97,7 @@ tk.Button(login_frame,
 
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
+root.withdraw()  # Hide main window until login is successful
 root.title("Employee Management System")
 root.geometry("950x550")
 root.config(bg="#f8c8dc")
@@ -123,6 +124,7 @@ def add_employee():
         "INSERT INTO employees (name,email,phone,department,salary) VALUES (%s,%s,%s,%s,%s)",
         (name.get(), email.get(), phone.get(), department.get(), salary.get())
     )
+    
     con.commit()
     con.close()
     fetch_data()
@@ -321,3 +323,4 @@ employee_table.bind("<ButtonRelease-1>", get_cursor)
 
 fetch_data()
 root.mainloop()
+login_window.mainloop()
