@@ -36,13 +36,7 @@ def login():
 
 
 # ================= MODERN LOGIN WINDOW =================
-def login():
-    if username.get() == "admin" and password.get() == "1234":
-        messagebox.showinfo("Login", "Login Successful")
-        login_window.destroy()
-        open_main_window()
-    else:
-        messagebox.showerror("Error", "Invalid Username or Password")
+
 
 login_window = tk.Tk()
 login_window.title("Login System")
@@ -322,5 +316,4 @@ employee_table.bind("<ButtonRelease-1>", get_cursor)
 # ---------------- LOAD DATA ----------------
 
 fetch_data()
-root.mainloop()
 login_window.mainloop()
