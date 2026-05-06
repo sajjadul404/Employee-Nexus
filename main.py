@@ -25,7 +25,7 @@ def log(msg, t="info"):
 
 # ================= LOGIN SYSTEM =================
 def login():
-    if username.get() == "admin" and password.get() == "1234":
+    if username.get() == "sajutonu" and password.get() == "2508":
         messagebox.showinfo("Login", "Login Successful")
         log("User logged in", "success")
         login_window.destroy()
